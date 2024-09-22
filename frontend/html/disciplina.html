@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/css/disciplina.css">
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+    <title>Portal Professor Senac</title>
+</head>
+
+<body>
+    <header>
+        <div id="menu">
+            <div id="menu-container">
+                <div id="triple-dash">
+                    <div class="dash"></div>
+                    <div class="dash"></div>
+                    <div class="dash"></div>
+                </div>
+                <h3>Menu</h3>
+            </div>
+            <nav id="menu-opcoes">
+                <a href="recentes.html">Recentes</a>
+                <hr>
+                <a href="#">Disciplina</a>
+                <hr>
+                <a href="#">Conceitos</a>
+            </nav>
+        </div>
+        <h1>Disciplina</h1>
+        <div id="pfp"></div>
+    </header>
+    <div id="container-centro">
+        <div id="selects">
+            <div class="select-label">
+                <label for="select-disciplina">Disciplina</label>
+                <select name="select-disciplina" id="select-disciplina">
+                    <option value="" disabled selected>Disciplinas</option>
+                    <option value="fisica">Física</option>
+                    <option value="matematica">Matemática</option>
+                </select>
+            </div>
+            <div class="select-label">
+                <label for="select-turma">Turma</label>
+                <select name="select-turma" id="select-turma">
+                    <option value="" disabled selected>Turmas</option>
+                    <option value="fisica">1º ano</option>
+                    <option value="matematica">2º ano</option>
+                </select>
+            </div>
+        </div>
+        <div id="container-avisos-atv">
+            <div id="avisos-atv">
+                <div id="escolha-atv">
+                    <h1>Atividades</h1>
+                </div>
+                <div id="escolha-avisos">
+                    <h1>Avisos</h1>
+                </div>
+            </div>
+            <div id="conteudo">
+                <nav id="atividades">
+                    <div class="container-atividade">
+                        <h1>Atividade de Funções do 1º Grau</h1>
+                        <p style="white-space: pre-line;">Tema: Funções do 1º grau dada a função f(x) = 5x - 7, determine:
+                            a) O valor de f(x) quando x = 2.
+                            b) Para que valor de x a função é igual a zero (f(x) = 0).
+                            c) faça o gráfico dessa função no plano cartesiano.
+                        </p>
+                    </div>
+                    <div class="container-atividade">
+                        <h1>Atividade de Progressão Aritmética (PA)</h1>
+                        <p class="p-atividade" style="white-space: pre-line;">Tema: Progressão Aritmética a sequência de números 2, 5, 8, 11,... forma uma Progressão Aritmética(PA). Determine:
+                            a) A razão da PA.
+                            b) O 10º termo da PA.
+                            c) A soma dos 15 primeiros termos da PA.
+                        </p>
+                    </div>
+                </nav>
+                <nav id="avisos">
+                    <div class="container-aviso">
+                        <h1>Revisão de prova</h1>
+                        <p style="white-space: pre-line;">Na próxima aula, faremos uma revisão completa dos conteúdos para a prova, que incluirá Progressões Aritméticas e Funções do 1º Grau. Não se esqueçam de trazer suas dúvidas e materiais de estudo.
+                            Anteciosamente,
+                            Prof. Lucas, Matemática
+
+                        </p>
+                    </div>
+                    <div class="container-aviso">
+                        <h1>Entrega de atividade</h1>
+                        <p style="white-space: pre-line;">Caros alunos,
+                            Lembro a todos que a atividade sobre Equações do 2º Grau deve ser entregue até sexta-feira. Quem tiver dificuldades pode me procurar durante o horário de atendimento.
+                            Cordialmente,
+                            Prof. Lucas, Matemática
+                        </p>
+                    </div>
+                </nav>
+                <div id="btn-adicionar">
+                    <h1>+</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/frontend/app.js"></script>
+    <script src="/frontend/js/disciplina.js"></script>
+</body>
+</html>

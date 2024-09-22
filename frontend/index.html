@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Portal Professor Senac</title>
+</head>
+
+<body>
+    <div id="container-login">
+        <h1>Login</h1>
+        <select name="select-usuario" id="tipo-usuario">
+            <option class="options" value="usuario" disabled selected>Usuário</option>
+            <option class="options" value="professor">Professor</option>
+            <option class="options" value="coordenador">Coordenador</option>
+        </select>
+        <div id="inputs">
+            <label for="email-input">Email</label>
+            <input type="email" name="email-input" id="email-input" placeholder="name@email.com" required>
+        </div>
+        <div id="inputs">
+            <label for="password-input">Senha</label>
+            <input type="password" name="password-input" id="password-input" placeholder="Senha" required>
+            <a href="#" id="recover-password">Esqueceu sua senha?</a>
+        </div>
+        <a href="html/recentes.html" id="btn-login">Login</a>
+        <!-- <input type="button" value="Login" id="btn-login"> -->
+    </div>
+</body>
+
+</html>
