@@ -103,3 +103,25 @@
 #avisos {
     display: none;
 }
+
+#btn-adicionar {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+    left: 870px;
+    width: 70px;
+    height: 70px;
+    background-color: #9A6BBF;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    box-shadow: 0px 0px 6px rgb(0, 0, 0, .7);
+}
+
+#btn-adicionar h1 {
+    font-size: 75px;
+    margin: 0px;
+}
