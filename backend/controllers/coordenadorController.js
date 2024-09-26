@@ -9,17 +9,18 @@ exports.getCoordenadores = async (req, res) => {
     }
   };
   
-  exports.getloginById = async (req, res) => {
+  exports.createCoordenador = async (req, res) => {
+    const { nome, email , senha } = req.body;
+    const newCoordenador = new Coordenador({ nome, email, senha });
+
     try {
-      const user = await login.findById(req.params.id);
-      if (!login) {
-        return res.status(404).json({ message: 'Login não encontrado' });
-      }
-      res.json(login);
-    } catch (error) {
-      res.status(500).json({ error: error.message });
+        const savedCoordenador = await newCoordenador.save();
+        res.status(201).json(savedCoordenador);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
     }
-  };
+};
+  
   
   exports.updateCoordenador = async (req, res) => {
     try {

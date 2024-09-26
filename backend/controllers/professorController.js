@@ -1,4 +1,4 @@
-const Professor = require('../models/professor');
+const professor = require('../models/professor');
 
 exports.getProfessores = async (req, res) => {
     try {
@@ -9,17 +9,18 @@ exports.getProfessores = async (req, res) => {
     }
   };
   
-  exports.getloginById = async (req, res) => {
+  exports.createProfessor = async (req, res) => {
+    const { nome, email , senha } = req.body;
+    const newProfessor = new Professor({ nome, email, senha });
+
     try {
-      const user = await login.findById(req.params.id);
-      if (!login) {
-        return res.status(404).json({ message: 'Login não encontrado' });
-      }
-      res.json(login);
-    } catch (error) {
-      res.status(500).json({ error: error.message });
+        const savedProfessor = await newProfessor.save();
+        res.status(201).json(savedProfessor);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
     }
-  };
+};
+  
   
   exports.updateProfessor = async (req, res) => {
     try {

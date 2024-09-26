@@ -9,17 +9,17 @@ exports.getAlunos = async (req, res) => {
     }
   };
   
-  exports.getAlunoById = async (req, res) => {
+  exports.createAluno = async (req, res) => {
+    const { nome, email , senha } = req.body;
+    const newAluno = new Aluno({ nome, email, senha });
+
     try {
-      const user = await login.findById(req.params.id);
-      if (!login) {
-        return res.status(404).json({ message: 'Login não encontrado' });
-      }
-      res.json(login);
-    } catch (error) {
-      res.status(500).json({ error: error.message });
+        const savedAluno = await newAluno.save();
+        res.status(201).json(savedAluno);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
     }
-  };
+};
   
   exports.updateAluno = async (req, res) => {
     try {
