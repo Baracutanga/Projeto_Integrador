@@ -1,9 +1,9 @@
-const login = require('../models/login');
+const coordenador = require('../models/coordenador');
 
-exports.getLogins = async (req, res) => {
+exports.getCoordenadores = async (req, res) => {
     try {
-      const Logins = await login.find();
-      res.json(Logins);
+      const Professores = await coordenador.find();
+      res.json(Professores);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
@@ -21,11 +21,11 @@ exports.getLogins = async (req, res) => {
     }
   };
   
-  exports.updatelogin = async (req, res) => {
+  exports.updateCoordenador = async (req, res) => {
     try {
-      const login = await login.findByIdAndUpdate(req.params.id, req.body, { new: true });
-      if (!login) {
-        return res.status(404).json({ message: 'Login não encontrado' });
+      const Professor = await coordenador.findByIdAndUpdate(req.params.id, req.body, { new: true });
+      if (!coordenador) {
+        return res.status(404).json({ message: 'Coordenador não encontrado' });
       }
       res.json(user);
     } catch (error) {
@@ -33,10 +33,10 @@ exports.getLogins = async (req, res) => {
     }
   };
   
-  exports.deletelogin = async (req, res) => {
+  exports.deleteCoordenador = async (req, res) => {
     try {
-      await login.findByIdAndDelete(req.params.id);
-      res.json({ message: 'Login Deletado' });
+      await coordenador.findByIdAndDelete(req.params.id);
+      res.json({ message: 'Coordenador Deletado' });
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
