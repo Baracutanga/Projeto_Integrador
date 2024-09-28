@@ -9,6 +9,18 @@ exports.getUsers = async (req, res) => {
     }
   };
   
+  exports.getUsersById = async (req, res) => {
+    try {
+      const user = await user.findById(req.params.id);
+      if (!user) {
+        return res.status(404).json({ message: 'Usuário não encontrado' });
+      }
+      res.json(user);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  };
+
   exports.createUser = async (req, res) => {
     const { nome, email , senha } = req.body;
     const newUser = new User({ nome, email, senha });

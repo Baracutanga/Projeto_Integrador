@@ -8,6 +8,18 @@ exports.getCoordenadores = async (req, res) => {
       res.status(500).json({ error: error.message });
     }
   };
+
+  exports.getCoordenadoresById = async (req, res) => {
+    try {
+      const coordenador = await coordenador.findById(req.params.id).populate('user');
+      if (!coordenador) {
+        return res.status(404).json({ message: 'Coordenador não encontrado' });
+      }
+      res.json(coordenador);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  };
   
   exports.createCoordenador = async (req, res) => {
     const { nome, email , senha } = req.body;
