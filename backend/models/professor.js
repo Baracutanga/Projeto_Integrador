@@ -5,6 +5,7 @@ const ProfessorSchema = new mongoose.Schema({
     nome: { type: String, required: true },
     senha: { type: Mixed, required: true },
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    isAdmin: { type: Boolean, default: false },
   });
 
   module.exports = mongoose.model('Professor', ProfessorSchema);

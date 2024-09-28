@@ -6,13 +6,21 @@ const UserSchema = new mongoose.Schema({
   email:{ type: String, required: true },
   nome: { type: String, required: true },
   senha: { type: String, required: true },
+  isAdmin: { type: Boolean, default: false },
 });
 
 UserSchema.pre('save', async function(next) {
   if (this.isModified('senha')) {
     this.senha = await bcrypt.hash(this.senha, 10);
   }
-  next();
+
+// Setando isAdmin basedo no 'user'
+if (this.user === 'Coordenador') {
+  this.isAdmin = true;
+} else {
+  this.isAdmin = false;
+}
+next();
 });
 
 UserSchema.methods.compareSenha = function(senha) {
