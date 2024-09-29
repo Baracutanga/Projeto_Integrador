@@ -1,0 +1,28 @@
+<div id="menu-placeholder"></div>
+    <nav id="menu">
+        <div id="logo-user">
+            <img src="/frontend/img/mediotec 1.png" alt="logo-mediotec">
+            <h3>Coordenador</h3>
+        </div>
+        <hr>
+        <div id="options">
+            <div id="home">
+                <img src="/frontend/icons/Home.svg" alt="icon-home">
+                <a href="/frontend/coordenador/home.html">Home</a>
+            </div>
+            <div id="comunicados">
+                <img src="/frontend/icons/Comunicados.svg" alt="icon-comunicados">
+                <a href="#">Comunicados</a>
+            </div>
+            <div id="conceitos">
+                <img src="/frontend/icons/Conceitos.svg" alt="icon-conceitos">
+                <a href="#">Conceitos</a>
+            </div>
+            <div id="registros">
+                <img src="/frontend/icons/Conceitos.svg" alt="icon-conceitos">
+                <a href="/frontend/coordenador/registros.html">Registros</a>
+            </div>
+        </div>
+        <hr>
+        <a href="/frontend/index.html">Sair</a>
+    </nav>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="select-user" id="select-user">
+        <option value="usuario" disabled selected>Usuário</option>
+        <option value="coordenador">Coordenador</option>
+        <option value="professor">Professor</option>
+        <option value="aluno">Aluno</option>
+    </select>
+    <button onclick="Redirecionar()"><h2>Entrar</h2></button>
+
+    <script>
+        function Redirecionar() {
+            const selectUserValue = document.getElementById('select-user').value;
+
+            if (selectUserValue === 'coordenador') {
+                window.location.href = '/frontend/coordenador/home.html'
+            } else if (selectUserValue === 'professor') {
+                window.location.href = '/frontend/professor/home.html'
+            }
+        }
+    </script>
+</body>
+</html>
