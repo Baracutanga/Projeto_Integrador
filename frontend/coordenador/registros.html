@@ -72,10 +72,173 @@
                         <option value="turma">3-B</option>
                     </select>
                     <div id="btn-add">
-                        <button id="add-user"><img src="/frontend/icons/add (1).svg" alt="btn-add" id="btn-add">
-                            Registrar</button>
+                        <button id="add-user" onclick="addRegistro()"><img src="/frontend/icons/add (1).svg"
+                                alt="btn-add" id="btn-add">Registrar</button>
                     </div>
                 </div>
+                <div id="opcoes-registro">
+                    <h2>Registrar:</h2>
+                    <div id="users">
+                        <button type="button" id="user-professor" onclick="OpenFProf()">Professor</button>
+                        <button type="button" id="user-coordenador" onclick="OpenFCoord()">Coordenador</button>
+                        <button type="button" id="user-aluno" onclick="OpenFAluno()">Aluno</button>
+                        <button type="button" id="disciplina" onclick="OpenFDisc()">Disciplina</button>
+                        <button type="button" id="turma" onclick="OpenFTurma()">Turma</button>
+                    </div>
+                </div>
+                <!-- FORMS REGISTROS -->
+                <!-- REGISTER PROFESSOR -->
+                <div class="register-form" id="register-professor">
+                    <div id="close">
+                        <img src="/frontend/icons/cruz.svg" alt="cruz-fechar" id="btn-fechar"
+                            onclick="closeForm('register-professor')">
+                    </div>
+                    <h1>Professor</h1>
+                    <form action="">
+                        <div class="register-inputs">
+                            <label for="input-nome">Nome</label>
+                            <input type="text" name="input-nome" class="input-nome" maxlength="150"
+                                placeholder="Digite o nome" required>
+                        </div>
+                        <div class="register-inputs">
+                            <label for="input-email">Email</label>
+                            <input type="email" name="input-email" class="input-email" maxlength="40"
+                                placeholder="Digite o email " required>
+                        </div>
+                        <div class="register-inputs">
+                            <label for="input-senha">Senha</label>
+                            <input type="password" name="input-senha" class="input-senha" placeholder="Digite a senha"
+                                required>
+                        </div>
+                        <div class="register-inputs">
+                            <label for="select-turma">Turma</label>
+                            <select name="select-turma" class="select-turma" required>
+                                <option value="selecionar-turma" selected disabled>Selecionar turma</option>
+                            </select>
+                        </div>
+                        <div class="register-inputs">
+                            <label for="select-disciplina">Disciplina</label>
+                            <select name="select-disciplina" id="select-disciplina" required>
+                                <option value="selecionar-disciplina" selected disabled>Selecionar disciplina</option>
+                            </select>
+                        </div>
+                        <div class="btn-registrar">
+                            <button type="button">Registrar</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- REGISTER COORDENADOR -->
+                <div class="register-form" id="register-coordenador">
+                    <div id="close">
+                        <img src="/frontend/icons/cruz.svg" alt="cruz-fechar" id="btn-fechar"
+                            onclick="closeForm('register-coordenador')">
+                    </div>
+                    <h1>Coordenador</h1>
+                    <form action="">
+                        <div class="register-inputs">
+                            <label for="input-nome">Nome</label>
+                            <input type="text" name="input-nome" class="input-nome" maxlength="150"
+                                placeholder="Digite o nome" required>
+                        </div>
+                        <div class="register-inputs">
+                            <label for="input-email">Email</label>
+                            <input type="email" name="input-email" class="input-email" maxlength="40"
+                                placeholder="Digite o email " required>
+                        </div>
+                        <div class="register-inputs">
+                            <label for="input-senha">Senha</label>
+                            <input type="password" name="input-senha" class="input-senha" placeholder="Digite a senha"
+                                required>
+                        </div>
+                        <div class="btn-registrar">
+                            <button type="button">Registrar</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- REGISTER ALUNO -->
+                <div class="register-form" id="register-aluno">
+                    <div id="close">
+                        <img src="/frontend/icons/cruz.svg" alt="cruz-fechar" id="btn-fechar"
+                            onclick="closeForm('register-aluno')">
+                    </div>
+                    <h1>Aluno</h1>
+                    <form action="">
+                        <div class="register-inputs">
+                            <label for="input-nome">Nome</label>
+                            <input type="text" name="input-nome" class="input-nome" maxlength="150"
+                                placeholder="Digite o nome" required>
+                        </div>
+                        <div class="register-inputs">
+                            <label for="input-email">Email</label>
+                            <input type="email" name="input-email" class="input-email" maxlength="40"
+                                placeholder="Digite o email " required>
+                        </div>
+                        <div class="register-inputs">
+                            <label for="input-senha">Senha</label>
+                            <input type="password" name="input-senha" class="input-senha" placeholder="Digite a senha"
+                                required>
+                        </div>
+                        <div class="register-inputs">
+                            <label for="select-turma">Turma</label>
+                            <select name="select-turma" class="select-turma" required>
+                                <option value="selecionar-turma" selected disabled>Selecionar turma</option>
+                            </select>
+                        </div>
+                        <div class="btn-registrar">
+                            <button type="button">Registrar</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- REGISTER DISCIPLINA -->
+                <div class="register-form" id="register-disciplina">
+                    <div id="close">
+                        <img src="/frontend/icons/cruz.svg" alt="cruz-fechar" id="btn-fechar"
+                            onclick="closeForm('register-disciplina')">
+                    </div>
+                    <h1>Disciplina</h1>
+                    <form action="">
+                        <div class="register-inputs">
+                            <label for="input-nome">Nome</label>
+                            <input type="text" name="input-nome" class="input-nome" maxlength="150"
+                                placeholder="Digite o nome" required>
+                        </div>
+                        <div class="register-inputs">
+                            <label for="select-turma">Turma</label>
+                            <select name="select-turma" class="select-turma" required>
+                                <option value="selecionar-turma" selected disabled>Selecionar turma</option>
+                            </select>
+                        </div>
+                        <div class="btn-registrar">
+                            <button type="button">Registrar</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- REGISTER TURMA -->
+                <div class="register-form" id="register-turma">
+                    <div id="close">
+                        <img src="/frontend/icons/cruz.svg" alt="cruz-fechar" id="btn-fechar"
+                            onclick="closeForm('register-turma')">
+                    </div>
+                    <h1>Turma</h1>
+                    <form action="">
+                        <div class="register-inputs">
+                            <label for="input-nome">Nome</label>
+                            <input type="text" name="input-nome" class="input-nome" maxlength="150"
+                                placeholder="Digite o nome" required>
+                        </div>
+                        <div class="register-inputs">
+                            <label for="select-turma">Disciplinas</label>
+                            <select name="select-turma" class="select-disciplina" required>
+                                <option value="selecionar-disciplina" selected disabled>Selecionar disciplina</option>
+                            </select>
+                        </div>
+                        <div class="btn-registrar">
+                            <button type="button">Registrar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- LISTA DE REGISTROS -->
                 <div id="atributos-conteudo">
                     <div id="atributos">
                         <p>Nome</p>
@@ -90,8 +253,9 @@
         </div>
     </div>
 
+    <script src="/frontend/js/registros.js"></script>
     <script src="/frontend/node_modules/animejs/lib/anime.min.js"></script>
-    <script src="app.js" type="module"></script>
+    <script src="/frontend/app.js" type="module"></script>
 </body>
 
 </html>
