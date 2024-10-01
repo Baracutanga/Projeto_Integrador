@@ -8,6 +8,18 @@ exports.getAlunos = async (req, res) => {
       res.status(500).json({ error: error.message });
     }
   };
+
+  exports.geAlunosById = async (req, res) => {
+    try {
+      const aluno = await aluno.findById(req.params.id).populate('user');
+      if (!aluno) {
+        return res.status(404).json({ message: 'Aluno não encontrado' });
+      }
+      res.json(aluno);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  };
   
   exports.createAluno = async (req, res) => {
     const { nome, email , senha } = req.body;
