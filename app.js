@@ -20,7 +20,7 @@ const notasAlunoRoutes = require("./routes/notasAlunoRoutes");
 dotenv.config();
 
 // Conectar ao banco de dados
-
+//a
 mongoose.connect(process.env.DATABASE)
 .then(() => console.log("Conectado ao Banco de Dados"))
 .catch(err => console.log("Erro ao Conectar ao Banco de dados", err));
