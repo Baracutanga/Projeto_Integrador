@@ -28,7 +28,7 @@ mongoose.connect(process.env.DATABASE)
 // Inicializar o aplicativo Express
 const app = express();
 
-// Middleware de segurança
+// Middleware de seguran
 app.use(helmet());
 
 // Middleware para habilitar CORS
