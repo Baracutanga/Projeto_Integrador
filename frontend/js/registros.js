@@ -1,15 +1,46 @@
 const escolhaRegistro = document.getElementById('opcoes-registro');
 const forms = document.querySelectorAll('.register-form');
 const btnClose = document.getElementById('btn-fechar');
+const btnSubmit = document.getElementById('submit-turma');
+
+
 
 // Abrir pop-up de escolha
 function addRegistro() {
     escolhaRegistro.style.visibility = 'visible';
 }
 
+async function carregarDisciplinas() {
+    try {
+        const response = await fetch('http://localhost:8000/api/disciplinas/')
+        if (!response.ok) {
+            throw new Error(`Erro: ${response.status}`);
+        }
+
+        const resultado = await response.json();
+        const disciplinas = resultado.data.disciplinas;
+        const selectDisciplinaTurma = document.getElementById('select-disciplina-turma');
+        const selectDisciplinaProf = document.getElementById('select-disciplina-professor');
+
+        disciplinas.forEach(disciplina => {
+            const createOption = document.createElement('option');
+            createOption.value = disciplina.nome;
+            createOption.innerText = disciplina.nome;
+
+            selectDisciplinaTurma.appendChild(createOption);
+            selectDisciplinaProf.appendChild(createOption);
+        });
+
+    } catch (error) {
+        console.error('Erro ao buscar dados:', error);
+    }
+}
+
+window.addEventListener('load', carregarDisciplinas);
+
 // Função para fechar formulário
 const closeForm = (idForm) => {
-    idFormulario = document.getElementById(idForm);
+    const idFormulario = document.getElementById(idForm);
     idFormulario.style.visibility = 'hidden';
 }
 

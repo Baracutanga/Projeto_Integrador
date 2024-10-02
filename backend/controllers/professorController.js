@@ -9,6 +9,18 @@ exports.getProfessores = async (req, res) => {
     }
   };
   
+  exports.getProfessoresById = async (req, res) => {
+    try {
+      const professor = await professor.findById(req.params.id).populate('user');
+      if (!professor) {
+        return res.status(404).json({ message: 'Professor não encontrado' });
+      }
+      res.json(professor);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  };
+
   exports.createProfessor = async (req, res) => {
     const { nome, email , senha } = req.body;
     const newProfessor = new Professor({ nome, email, senha });
