@@ -1,8 +1,9 @@
 #titulo {
     position: relative;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 10px;
     margin-top: 0px;
+    color: #2E4EAD;
     z-index: 2;
     margin-bottom: 0px;
     width: 1000px;
@@ -108,6 +109,17 @@ main {
 
 #conteudo {
     width: 970px;
+}
+
+.conteudo-lista {
+    display: flex;
+    list-style-type: none;
+    margin: 15px 0px;
+}
+
+.conteudo-lista p {
+    margin-right: 100px;
+    width: 200px;
 }
 
 #conteudo h1 {

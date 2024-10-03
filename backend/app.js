@@ -20,7 +20,7 @@ const notasAlunoRoutes = require("./routes/notasAlunoRoutes");
 dotenv.config();
 
 // Conectar ao banco de dados
-
+//a
 mongoose.connect(process.env.DATABASE)
 .then(() => console.log("Conectado ao Banco de Dados"))
 .catch(err => console.log("Erro ao Conectar ao Banco de dados", err));
@@ -28,7 +28,7 @@ mongoose.connect(process.env.DATABASE)
 // Inicializar o aplicativo Express
 const app = express();
 
-// Middleware de segurança
+// Middleware de seguran
 app.use(helmet());
 
 // Middleware para habilitar CORS

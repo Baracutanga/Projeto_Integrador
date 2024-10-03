@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/frontend/styles.css">
     <link rel="stylesheet" href="/frontend/css/registros.css">
     <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Portal mediotec</title>
 </head>
 
@@ -114,13 +117,14 @@
                         <br>
                         <label for="select-turma">Turma</label>
                         <br>
-                        <select name="select-turma" class="select-turma-professor" required>
+                        <select name="select-turma" class="select-turma-professor" id="select-turma-professor" required>
                             <option value="selecionar-turma" selected disabled>Selecionar turma</option>
                         </select>
                         <br>
                         <label for="select-disciplina">Disciplina</label>
                         <br>
-                        <select name="select-disciplina-professor" id="select-disciplina-professor" class="select-disciplina" required>
+                        <select name="select-disciplina-professor" id="select-disciplina-professor"
+                            class="select-disciplina" required>
                             <option value="selecionar-disciplina" selected disabled>Selecionar disciplina</option>
                         </select>
                         <br>
@@ -137,21 +141,21 @@
                     </div>
                     <h1>Coordenador</h1>
                     <form action="">
-                        <div class="register-inputs">
-                            <label for="input-nome">Nome</label>
-                            <input type="text" name="input-nome-coordenador" class="input-nome" maxlength="150"
-                                placeholder="Digite o nome" required>
-                        </div>
-                        <div class="register-inputs">
-                            <label for="input-email">Email</label>
-                            <input type="email" name="input-email-coordenador" class="input-email" maxlength="40"
-                                placeholder="Digite o email " required>
-                        </div>
-                        <div class="register-inputs">
-                            <label for="input-senha">Senha</label>
-                            <input type="password" name="input-senha-coordenador" class="input-senha"
-                                placeholder="Digite a senha" required>
-                        </div>
+                        <label for="input-nome">Nome</label>
+                        <br>
+                        <input type="text" name="input-nome-coordenador" class="input-nome" maxlength="150"
+                            placeholder="Digite o nome" required>
+                        <br>
+                        <label for="input-email">Email</label>
+                        <br>
+                        <input type="email" name="input-email-coordenador" class="input-email" maxlength="40"
+                            placeholder="Digite o email " required>
+                        <br>
+                        <label for="input-senha">Senha</label>
+                        <br>
+                        <input type="password" name="input-senha-coordenador" class="input-senha"
+                            placeholder="Digite a senha" required>
+                        <br>
                         <div class="btn-registrar">
                             <button type="submit">Registrar</button>
                         </div>
@@ -165,27 +169,27 @@
                     </div>
                     <h1>Aluno</h1>
                     <form action="" id="#form-aluno">
-                        <div class="register-inputs">
-                            <label for="input-nome">Nome</label>
-                            <input type="text" name="input-nome-aluno" class="input-nome" maxlength="150"
-                                placeholder="Digite o nome" required>
-                        </div>
-                        <div class="register-inputs">
-                            <label for="input-email">Email</label>
-                            <input type="email" name="input-email-aluno" class="input-email" maxlength="40"
-                                placeholder="Digite o email " required>
-                        </div>
-                        <div class="register-inputs">
-                            <label for="input-senha">Senha</label>
-                            <input type="password" name="input-senha-aluno" class="input-senha"
-                                placeholder="Digite a senha" required>
-                        </div>
-                        <div class="register-inputs">
-                            <label for="select-turma">Turma</label>
-                            <select name="select-turma-aluno" class="select-turma" required>
-                                <option value="selecionar-turma" selected disabled>Selecionar turma</option>
-                            </select>
-                        </div>
+                        <label for="input-nome">Nome</label>
+                        <br>
+                        <input type="text" name="input-nome-aluno" class="input-nome" maxlength="150"
+                            placeholder="Digite o nome" required>
+                        <br>
+                        <label for="input-email">Email</label>
+                        <br>
+                        <input type="email" name="input-email-aluno" class="input-email" maxlength="40"
+                            placeholder="Digite o email " required>
+                        <br>
+                        <label for="input-senha">Senha</label>
+                        <br>
+                        <input type="password" name="input-senha-aluno" class="input-senha" placeholder="Digite a senha"
+                            required>
+                        <br>
+                        <label for="select-turma">Turma</label>
+                        <br>
+                        <select name="select-turma-aluno" id="select-turma-aluno" class="select-turma" required>
+                            <option value="selecionar-turma" selected disabled>Selecionar turma</option>
+                        </select>
+                        <br>
                         <div class="btn-registrar">
                             <button type="submit">Registrar</button>
                         </div>
@@ -199,19 +203,19 @@
                     </div>
                     <h1>Disciplina</h1>
                     <form action="">
-                        <div class="register-inputs">
-                            <label for="input-nome">Nome</label>
-                            <input type="text" name="input-nome-disciplina" class="input-nome" maxlength="150"
-                                placeholder="Digite o nome" required>
-                        </div>
-                        <div class="register-inputs">
-                            <label for="select-turma-disciplina">Turma</label>
-                            <select name="select-turma-disciplina" class="select-turma">
-                                <option value="selecionar-turma" selected disabled>Selecionar turma</option>
-                            </select>
-                        </div>
+                        <label for="input-nome">Nome</label>
+                        <br>
+                        <input type="text" name="input-nome-disciplina" class="input-nome" maxlength="150"
+                            placeholder="Digite o nome" required>
+                        <br>
+                        <label for="select-turma-disciplina">Turma</label>
+                        <br>
+                        <select name="select-turma-disciplina" id="select-turma-disciplina" class="select-turma">
+                            <option value="selecionar-turma" selected disabled>Selecionar turma</option>
+                        </select>
+                        <br>
                         <div class="btn-registrar">
-                            <button type="submit">Registrar</button>
+                            <button type="submit" onclick="registraDisciplina(), carregarDisciplinas()">Registrar</button>
                         </div>
                     </form>
                 </div>
@@ -228,20 +232,28 @@
                         <input type="text" name="input-nome-turma" id="input-nome-turma" class="input-nome"
                             maxlength="150" placeholder="Digite o nome" required>
                         <br>
-                        <label for="select-turma">Disciplinas</label>
+                        <label for="select-turma">Disciplinas #1</label>
                         <br>
-                        <select name="select-disciplina-turma" id="select-disciplina-turma" class="select-disciplina"
+                        <input type="text" name="input-disciplina-turma">
+                        <br>
+                        <label for="">Disciplina #2</label>
+                        <br>
+                        <input type="text" name="input-disciplina-turma">
+                        <!-- <select name="select-disciplina-turma" id="select-disciplina-turma" class="select-disciplina"
                             required>
                             <option value="selecionar-disciplina" selected disabled>Selecionar disciplina</option>
-                        </select>
+                        </select> -->
                         <br>
                         <label for="input-turno">Turno</label>
                         <br>
                         <input type="text" name="input-turno-turma" id="input-turno-turma" class="input-turno"
                             maxlength="20" placeholder="Digite o turno" required>
                         <br>
+                        <!-- <br>
+                        <p id="btn-add-disc" onclick="adicionarSelectDisciplina()">Adicionar Disciplina</p>
+                        <br> -->
                         <div class="btn-registrar">
-                            <button type="submit" id="submit-turma">Registrar</button>
+                            <button type="submit" id="submit-turma" onclick="registrarTurma()">Registrar</button>
                         </div>
                     </form>
                 </div>
@@ -254,7 +266,13 @@
                         <p>Tipo</p>
                     </div>
                     <div id="conteudo">
-                        <h1>Lista Vazia :/</h1>
+                        <ul id="lista-registros">
+                            <li class="conteudo-lista" id="1234">
+                                <p class="nome-registro">nome aqui</p>
+                                <p class="email-registro">cricri@email.com</p>
+                                <p class="tipo-registro">tipo aqui</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </main>
