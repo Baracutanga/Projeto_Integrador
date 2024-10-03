@@ -19,8 +19,8 @@ const notasAlunoRoutes = require("./routes/notasAlunoRoutes");
 // Carregar variáveis de ambiente do arquivo .env
 dotenv.config();
 
-// Conectar ao banco de dados
-//a
+
+
 mongoose.connect(process.env.DATABASE)
 .then(() => console.log("Conectado ao Banco de Dados"))
 .catch(err => console.log("Erro ao Conectar ao Banco de dados", err));
@@ -28,7 +28,7 @@ mongoose.connect(process.env.DATABASE)
 // Inicializar o aplicativo Express
 const app = express();
 
-// Middleware de seguran
+// Middleware de segurança
 app.use(helmet());
 
 // Middleware para habilitar CORS
@@ -49,9 +49,9 @@ app.use(bodyParser.json());
 // app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use("/api/turmas", turmaRoutes);
-app.use('/api/plantacoes', professorRoutes);
-app.use('/api/inspecoes', alunoRoutes);
-app.use('/api/inspecoes', coordenadorRoutes);
+app.use('/api/professor', professorRoutes);
+app.use('/api/aluno', alunoRoutes);
+app.use('/api/coordenador', coordenadorRoutes);
 app.use("/api/disciplinas", disciplinaRoutes);
 app.use("/api/avisos", avisoRoutes);
 app.use("/api/notas", notasAlunoRoutes);

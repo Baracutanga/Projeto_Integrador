@@ -8,7 +8,7 @@ router.post('/create', turmaController.createTurma);
 // Rota para listar todas as turmas
 router.get('/', turmaController.getAllTurmas);
 
-// Rota para deletar turma por ID (parâmetro da rota) ou nome (via corpo da requisição)
-router.delete('/delete/:id?', turmaController.deleteTurma);
+// // Rota para deletar turma por ID (parâmetro da rota) ou nome (via corpo da requisição)
+// router.delete('/delete/:id?', turmaController.deleteTurma);
 
-module.exports = router;
+ module.exports = router;

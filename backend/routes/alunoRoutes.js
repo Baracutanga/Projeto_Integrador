@@ -1,12 +1,14 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const mongoose = require('mongoose');
-const aluno = require('../controllers/alunoController');
+const alunoController = require("../controllers/alunoController");
 
-router.get('/', aluno.getAllAlunos);
-router.get('/:id', aluno.getAlunosById);
-router.post('/create', aluno.createAluno);
-router.put('/:id', aluno.updateAluno);
-router.delete('/:id', aluno.deleteAluno);
+// Criar um novo aluno
+router.post("/create", alunoController.createAluno);
+
+// Listar todos os alunos
+router.get("/", alunoController.getAllAlunos);
+
+// Deletar aluno por ID
+router.delete("/delete/:alunoId", alunoController.deleteAluno);
 
 module.exports = router;

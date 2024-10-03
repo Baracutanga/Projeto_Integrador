@@ -104,7 +104,8 @@ header {
 #logo-user {
     display: flex;
     flex-direction: column;
-    padding: 15px 0px;
+    padding: 20px 0px;
+    padding-bottom: 1px;
 }
 
 #logo-user img, h3 {
@@ -150,9 +151,11 @@ header {
 
 #options a {
     color: #fff;
+    margin-left: 15px;
 }
 
 #options img {
+    width: 10%;
     margin-right: 10px;
     filter: invert(1);
 }
@@ -160,4 +163,5 @@ header {
 #home, #comunicados, #conceitos, #registros {
     display: flex;
     align-items: center;
+    font-size: 15px;
 }

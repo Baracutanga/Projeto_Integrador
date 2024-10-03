@@ -2,13 +2,10 @@ const express = require("express");
 const router = express.Router();
 const disciplinaController = require("../controllers/disciplinaController");
 
-// Criar uma nova disciplina
-router.post("/create", disciplinaController.createDisciplina);
+// criar disciplina
+router.post("/create", disciplinaController.criarDisciplina);
 
-// Listar todas as disciplinas
+// listar disciplinas
 router.get("/", disciplinaController.getAllDisciplinas);
-
-// Deletar disciplina por ID (rota) ou nome (corpo da requisição)
-router.delete("/delete/:id?", disciplinaController.deleteDisciplina);
 
 module.exports = router;

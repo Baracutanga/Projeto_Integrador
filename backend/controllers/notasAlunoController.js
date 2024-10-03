@@ -1,4 +1,4 @@
-const Aluno = require("../models/alunoModel");
+const Aluno = require("../models/conceitoModel");
 const Disciplina = require("../models/disciplinaModel"); // Importa o modelo de Disciplina
 const mongoose = require("mongoose");
 
