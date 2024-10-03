@@ -41,7 +41,7 @@ header {
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    min-width: 1146px;
+    width: 88.5vw;
 }
 
 #pastas {
